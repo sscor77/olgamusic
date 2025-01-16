@@ -1,0 +1,46 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Olga Playlist Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Olga Playlist Manager</h1>
+    
+    <div class="converter-section">
+      <input type="text" id="youtubeUrl" placeholder="Pega el enlace aquí">
+      <button id="convertBtn">Añadir a la lista</button>
+    </div>
+
+    <div class="playlist-section">
+      <h2>Listas de Reproducción</h2>
+      <div id="noPlaylistMessage">
+        <p>No hay listas de reproducción. ¡Crea una nueva!</p>
+        <div class="create-playlist-form">
+          <input type="text" id="initialPlaylistName" placeholder="Nombre de la lista">
+          <button id="initialCreatePlaylistBtn">Crear Lista</button>
+        </div>
+      </div>
+
+      <div id="playlistContainer" class="hidden">
+        <div class="playlist-header">
+          <select id="playlistSelect"></select>
+          <div class="create-playlist-form">
+            <input type="text" id="newPlaylistName" placeholder="Nombre de la nueva lista">
+            <button id="createPlaylistBtn">Crear Lista</button>
+          </div>
+        </div>
+        <div id="songList" class="song-list"></div>
+        <div class="player-container">
+          <div id="player"></div>
+          <canvas id="visualizer"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
